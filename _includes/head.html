@@ -2,9 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  {% if page.pocketverification %}<meta name="pocket-site-verification" content="{{page.pocketverification}}" />{% endif %}
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  
+
   {% assign user_url = site.url | append: site.baseurl %}
   {% assign full_base_url = user_url | default: site.github.url %}
   <link rel="stylesheet" href="{{ "/assets/style.css" | prepend: full_base_url }}">
